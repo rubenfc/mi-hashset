@@ -5,4 +5,6 @@ comment1.params=valor
 comment1.target=boolean\ add(int)
 comment2.params=
 comment2.target=void\ clear()
-numComments=3
+comment3.params=elemento
+comment3.target=boolean\ contains(int)
+numComments=4

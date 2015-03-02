@@ -44,4 +44,19 @@ public class MiHashSet
         int[] nuevoHashSet = new int[0];
         hashSet = nuevoHashSet;
     }
+    
+    public boolean contains(int elemento)
+    {
+        boolean existe = false;
+        int cont = 0;
+        while(cont < hashSet.length && !existe)
+        {
+            if(hashSet[cont] == elemento)
+            {
+                existe = true;
+            }
+            cont++;
+        }
+        return existe;
+    }
 }
