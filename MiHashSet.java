@@ -38,4 +38,10 @@ public class MiHashSet
         }
         return noExiste;
     }
+    
+    public void clear()
+    {
+        int[] nuevoHashSet = new int[0];
+        hashSet = nuevoHashSet;
+    }
 }
