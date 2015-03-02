@@ -59,4 +59,46 @@ public class MiHashSet
         }
         return existe;
     }
+    
+    public boolean isEmpty()
+    {
+        boolean empty = false;
+        if(hashSet.length == 0)
+        {
+            empty = true;
+        }
+        return empty;
+    }
+    
+    public boolean remove(int elemento)
+    {
+        boolean existe = false;
+        int cont = 0;
+        int indiceValor = 0;
+        while(cont < hashSet.length && !existe)
+        {
+            if(hashSet[cont] == elemento)
+            {
+                indiceValor = cont;
+                existe = true;
+            }
+            cont++;
+        }
+        
+        if(existe)
+        {
+            int[] nuevoHash = new int[hashSet.length - 1];
+            int indice = 0;
+            for(int i = 0; i < hashSet.length; i++)
+            {
+                if(i != indiceValor)
+                {
+                    nuevoHash[indice] = hashSet[i];
+                    cont++;
+                }
+            }
+            hashSet = nuevoHash;
+        }
+        return existe;
+    }
 }
