@@ -124,4 +124,28 @@ public class MiHashSet
         }
         return cadena;
     }
+    
+    public boolean equals(MiHashSet otroConjunto)
+    {
+        boolean igual = true;
+        if(hashSet.length != otroConjunto.size())
+        {
+            igual = false;
+        }
+        
+        else 
+        {
+            int cont = 0;
+            while(cont < hashSet.length && igual)
+            {
+                int valor = hashSet[cont];
+                if(!otroConjunto.contains(valor))
+                {
+                    igual = false;
+                }
+                cont++;
+            }
+        }
+        return igual;
+    }
 }
