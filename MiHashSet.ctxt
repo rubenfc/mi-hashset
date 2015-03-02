@@ -13,4 +13,6 @@ comment5.params=elemento
 comment5.target=boolean\ remove(int)
 comment6.params=
 comment6.target=int\ size()
-numComments=7
+comment7.params=
+comment7.target=java.lang.String\ toString()
+numComments=8

@@ -106,4 +106,22 @@ public class MiHashSet
     {
         return (hashSet.length);
     }
+    
+    public String toString()
+    {
+        String cadena = ":";
+        if(hashSet.length == 0)
+        {
+            cadena = "[0]";
+        }
+        
+        else
+        {
+            for(int i = 0; i < hashSet.length; i++)
+            {
+                cadena = cadena + "[" + hashSet[i] + "]";
+            }
+        }
+        return cadena;
+    }
 }
